@@ -32,19 +32,19 @@ for (let i = 0; i < height; i++) {
         let cellId = `c${i}-${j}`
         cell.classList.add(cellClass)
         cell.classList.add(cellId)
-        cell.classList.add("dead")
+        cell.classList.add("inactive")
         cell.addEventListener("mousedown", () => {
             cell.classList.toggle("active")
-            cell.classList.toggle("dead")
+            cell.classList.toggle("inactive")
         })
         cell.addEventListener("mouseenter", () => {
             if (mousePressed) {
                 if (mode) { // draw mode
                     cell.classList.add("active")
-                    cell.classList.remove("dead")
+                    cell.classList.remove("inactive")
                 }
                 else {
-                    cell.classList.add("dead")
+                    cell.classList.add("inactive")
                     cell.classList.remove("active")
                 }
             }
@@ -58,7 +58,7 @@ for (let i = 0; i < height; i++) {
 
 reset.addEventListener("click", () => {
     for (let cell of cells) {
-        cell.classList.add("dead")
+        cell.classList.add("inactive")
         cell.classList.remove("active")
     }
 })
@@ -66,7 +66,7 @@ reset.addEventListener("click", () => {
 function swapCells() {
     for (let c of cells) {
         c.classList.toggle("active")
-        c.classList.toggle("dead")
+        c.classList.toggle("inactive")
     }
 }
 
