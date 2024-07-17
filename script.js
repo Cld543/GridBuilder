@@ -9,7 +9,7 @@ const eraseBtn = document.getElementById("erase")
 const modeWindow = document.getElementById("mode-window")
 const cells = []
 let mode = 1 // 1 = draw. 0 = erase.
-let mousePressed = true;
+let mousePressed = false;
 
 document.addEventListener("mousedown", () => {
     mousePressed = true
