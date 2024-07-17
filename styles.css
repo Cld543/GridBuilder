@@ -1,0 +1,103 @@
+:root {
+    --cell-height: 30px;
+    --cell-width: 30px;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem;
+    background-color: rgb(100, 100, 120);
+}
+
+#grid {
+    padding-top: 5rem;
+    table-layout: fixed;
+}
+
+.table-cell {
+    background-color: white;
+    border: 1px solid black;
+    min-width: var(--cell-width);
+    height: var(--cell-height);
+}
+
+.table-cell:hover {
+    background-color: rgb(127, 217, 255);
+}
+
+.active {
+    background-color: gray;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    color: white;
+    flex-wrap: wrap;
+    padding-right: 1rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: rgb(50, 50, 50);
+}
+
+li, span {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    padding: 0.5rem;
+    font-size: 2rem;
+    font-weight: 900;
+    border: 2px solid white;
+    color: white;
+    background-color: rgb(50,50,50);
+}
+
+#reset, #flip, #draw {
+    background-color: rgb(100, 170, 100);
+    padding: 0.5rem;
+    width: fit-content;
+}
+#erase {
+    background-color: rgb(210, 100, 100);
+    padding: 0.5rem;
+}
+#mode {
+    width:3.8rem;
+    height: fit-content;
+    padding: 0.5rem;
+    overflow: hidden;
+}
+#mode-window {
+    transition: transform 0.3s ease-in-out;
+}
+
+.erase-mode {
+    transform: translateX(-137%);
+}
+.draw-mode {
+    transform: translateX(0);
+}
