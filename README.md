@@ -1,6 +1,8 @@
 GridBuilder
 
 A simple web-based grid drawing tool.
+<img width="971" alt="image" src="https://github.com/user-attachments/assets/1a0ef5ea-cdc6-4d43-a3b3-d5abb4e3cf66">
+
 
 This tool can be used to create grids using a mouse-based drawing system.
 
